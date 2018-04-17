@@ -85,9 +85,10 @@ body{
 //==/Global==//
 
 //==Components==//
+// Navbar
 .navbar{
 	background-color: $color__blue--darkest;
-	padding: $size--default;
+	padding: $size--small $size--default;
 	margin-bottom: $size--small;
 }
 .navbar div.p-2{
@@ -100,24 +101,23 @@ body{
 .navbar h1 a{
 	color: $color__blue--highlighted;
 }
-
+// Header Group
 .header__group{
 	background-color: $color__blue--darkest;
 	padding: $size--small;
 	border-bottom: 1px solid $color__blue--highlighted;
 }
-
 .header__group i{
 	margin-left: $size--small;
 }
-
+// Chat Component
 .area__chat{
 	height: 100%;
 	padding: $size--small;
 	background-color: $color__blue--dark;
 }
 
-///Components==//
+//==END Components==//
 
 .sidebar{
 	width: 300px;
