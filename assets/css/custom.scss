@@ -117,18 +117,36 @@ body{
 	background-color: $color__blue--dark;
 }
 
-//==END Components==//
+// comp__channels
+.container__items{
+	padding: $size--small;
+	background: $color__blue--darker;
+}
 
-.sidebar{
-	width: 300px;
-	height: 100vh;
+// pinned containers
+.container__pinned section{
+	width: 400px;
+	background: $color__blue--darkest;
+	padding: $size--small;
+	margin-bottom: $size--small;
+}
+.container__pinned section i{
+	color: $color__blue--darker;
+}
+
+//==END Components==//
+[class^="container"]{
 	margin-left: $size--small;
 }
-.column h3{
+
+.container__contacts{
+	width: 300px;
+}
+.sidebar h3{
 	margin: $size--small;
 }
-.primary-chat{
+.container__chat{
 	width: 400px;
-	height: 100vh;
 	margin-left: $size--small;
 }
+
