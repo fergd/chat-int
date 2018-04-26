@@ -3,7 +3,7 @@ layout: home
 ---
 <nav class="navbar d-flex justify-content-between">
     <div class="p-2">
-        <h1><a class="navbar-brand" href="#">RESPOND Sandbox</a></h1>
+        <h1><a class="navbar-brand" href="#">SANDBOX</a></h1>
     </div>
     <div class="dropdown ml-auto p-2">
         <button class="btn-no-bg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i>&nbsp;Settings
@@ -16,7 +16,7 @@ layout: home
     </div>
 </nav>
 
-<main class="d-flex">
+<main class="d-flex"  id="app">
     <div class="container__contacts d-flex flex-column">
         <article class="sidebar comp__channels">
             <header class="header__group">
@@ -64,5 +64,19 @@ layout: home
 		<section class="d-flex justify-content-center">
 			<i class="fas fa-thumbtack fa-lg"></i>
 		</section>
+   	</div>
+
+   	<div class="container__ptt">
+   		<header class="header__group d-flex justify-content-between align-items-center">
+            <h4>Push to Talk</h4>
+        </header>
+        <section class="area__ptt">
+        	{% for user in site.data.users.users %} 
+            <div class="ptt__button d-flex justify-content-between {% if user.is_busy %}is-busy{% endif %} {% if user.is_unread %}is-unread{% endif %}">
+            <span>{{ user.first_name }}&nbsp;{{ user.last_name }}</span>
+            <span class="ptt__button__control"><i class="far fa-times-circle"></i></span>
+        	</div>
+        	{% endfor %} 
+        </section>
    	</div>
 </main>
