@@ -2,33 +2,38 @@
     "users": [
     {
         "first_name": "Woodman",
-        "last_name": "Gimeno"
+        "last_name": "Gimeno",
+        "state": "is_new"
     },
     {
         "first_name": "Lee",
         "last_name": "Glave",
-        "is_incoming": true
+        "state": "is_incoming"
     },
     {
         "first_name": "Cord",
-        "last_name": "Sonnenschein"
+        "last_name": "Sonnenschein",
+        "state": "is_default"
     },
     {
         "first_name": "Penelopa",
         "last_name": "Fiddymont",
-        "is_busy": true
+        "state": "is_busy"
     },
     {
         "first_name": "Rodger",
-        "last_name": "McKeowon"
+        "last_name": "McKeowon",
+        "state": "is_unread"
     },
     {
         "first_name": "Rolfe",
-        "last_name": "Edmunds"
+        "last_name": "Edmunds",
+        "state": "is_default"
     },
     {
         "first_name": "Anni",
-        "last_name": "Collishaw"
+        "last_name": "Collishaw",
+        "state": "is_default"
     },
     {
         "first_name": "Glad",
@@ -38,10 +43,11 @@
     {
         "first_name": "Crystie",
         "last_name": "Burch",
-        "is_busy": true
+        "state": "is_busy"
     },
     {
         "first_name": "Antoinette",
-        "last_name": "Hazzard"
+        "last_name": "Hazzard",
+        "state": "is_default"
     }]
 }

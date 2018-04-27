@@ -1,0 +1,15 @@
+{
+    "sections": [
+    {
+        "title": "Channels",
+        "type": "default"
+    },
+    {
+        "title": "Conversations",
+        "type": "default"
+    },
+    {
+        "title": "Push to Talk",
+        "type": "ptt"
+    }]
+}

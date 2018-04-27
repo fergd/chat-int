@@ -53,7 +53,6 @@ body{
 }  
 h1,h2,h3,h4{
 	font-family: $type__title;
-	
 	color: $color__light;
 	margin: 0;
 }
@@ -105,7 +104,7 @@ body{
 .header__group{
 	background-color: $color__blue--darkest;
 	padding: $size--small;
-	border-bottom: 1px solid $color__blue--highlighted;
+	border-bottom: 2px solid $color__blue--highlighted;
 }
 .header__group i{
 	margin-left: $size--small;
@@ -114,10 +113,15 @@ body{
 .area__chat{
 	height: 100%;
 	padding: $size--small;
-	background-color: $color__blue--dark;
+	background-color: $color__light;
+	max-width: 400px;
 	min-width: 300px;
 }
-
+.container__chat .header__group {
+	h4{
+		color: $color__blue--highlighted;
+	}
+}
 // comp__channels
 .container__items{
 	padding: $size--small;
@@ -127,9 +131,11 @@ body{
 // pinned containers
 .container__pinned section{
 	min-width: 300px;
+	max-width: 400px;
 	background: $color__blue--darkest;
 	padding: $size--small;
 	margin-bottom: $size--small;
+	height: 200px;
 }
 .container__pinned section i{
 	color: $color__blue--darker;
@@ -150,17 +156,24 @@ body{
 	width: 400px;
 	margin-left: $size--small;
 }
+
+// PTT
 .area__ptt{
 	height: 100%;
 	padding: $size--small;
 	background-color: $color__blue--darker;
 	min-width: 300px;
 }
-
+.is-ptt{
+	border-bottom: 2px solid $color__orange;
+	h4{
+		color: $color__orange;
+	}
+}
 // PTT Buttons
 .ptt__button{
 	background: $color__blue--darkest;
-	color: $color__light;
+	color: $shade__medium;
 	margin-bottom: $size--small;
 	padding: $size--small;
 	border-radius: 5px;
@@ -168,13 +181,23 @@ body{
 	cursor: pointer;
 }
 
-.ptt__button.is-busy{
-	background: $color__red;
-	color: $color__blue__darkest;
+[data-state="is_busy"]{
+	border: 2px solid $color__red;
+	color: $color__light;
 }
-.is-unread{
+
+[data-state="is_unread"]{
 	background: $color__orange;
 	color: $color__blue__darkest;
+	font-weight: 700;
+}
+[data-state="is_new"]{
+	font-weight: 700;
+}
+[data-state="is_incoming"]{
+	background: $color__blue--highlighted;
+	color: $color__blue--darkest;
+	font-weight: 700;
 }
 .ptt__button__control{
 	display: none;
