@@ -178,7 +178,9 @@ body{
 	padding: $size--small;
 	border-radius: 5px;
 	transition: all ease 0.5s;
-	cursor: pointer;
+	&:not([data-state="is_incoming"]){
+		cursor: pointer;
+	}
 }
 
 [data-state="is_busy"]{
