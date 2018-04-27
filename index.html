@@ -75,7 +75,9 @@ layout: home
             <div class="ptt__button d-flex justify-content-between" data-state="{{ user.state }}"
             >
             <span>{{ user.first_name }}&nbsp;{{ user.last_name }}</span>
+            {% unless user.state == 'is_incoming' %} 
             <span class="ptt__button__control"><i class="far fa-times-circle"></i></span>
+            {% endunless %} 
             {% if user.state == 'is_incoming' %} 
         	<span><i class="fas fa-volume-up"></i></span>
         	{% endif %} 

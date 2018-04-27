@@ -207,7 +207,7 @@ body{
 		display: block;
 	}
 }
-.ptt__button:active{
+.ptt__button:active:not([data-state="is_busy"]):not([data-state="is_incoming"]){
 	background: $color__green;
 	color: $color__blue__darkest;
   	animation: pulse 1s infinite cubic-bezier(.48,.01,.61,1.01);
