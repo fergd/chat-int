@@ -1,0 +1,53 @@
+{
+    "users": [
+    {
+        "first_name": "Woodman",
+        "last_name": "Gimeno",
+        "state": "is_new"
+    },
+    {
+        "first_name": "Lee",
+        "last_name": "Glave",
+        "state": "is_incoming"
+    },
+    {
+        "first_name": "Cord",
+        "last_name": "Sonnenschein",
+        "state": "is_default"
+    },
+    {
+        "first_name": "Penelopa",
+        "last_name": "Fiddymont",
+        "state": "is_busy"
+    },
+    {
+        "first_name": "Rodger",
+        "last_name": "McKeowon",
+        "state": "is_unread"
+    },
+    {
+        "first_name": "Rolfe",
+        "last_name": "Edmunds",
+        "state": "is_default"
+    },
+    {
+        "first_name": "Anni",
+        "last_name": "Collishaw",
+        "state": "is_default"
+    },
+    {
+        "first_name": "Glad",
+        "last_name": "Fairfull",
+        "state": "is_unread"
+    },
+    {
+        "first_name": "Crystie",
+        "last_name": "Burch",
+        "state": "is_busy"
+    },
+    {
+        "first_name": "Antoinette",
+        "last_name": "Hazzard",
+        "state": "is_waiting"
+    }]
+}

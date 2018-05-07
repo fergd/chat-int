@@ -1,0 +1,46 @@
+{
+    "channel": [
+    {
+        "trip": "00881",
+        "status": "Assigned",
+        "pinned": false,
+        "unread": false
+    },
+    {
+        "trip": "00882",
+        "status": "Transporting",
+        "pinned": false,
+        "unread": false
+    },
+    {
+        "trip": "00883",
+        "status": "En-route",
+        "pinned": false,
+        "unread": false
+    },
+    {
+        "trip": "00891",
+        "status": "At Destination",
+        "pinned": false,
+        "unread": false
+    },
+    {
+        "trip": "00893",
+        "status": "En-route",
+        "pinned": false,
+        "unread": false
+    },
+    {
+        "trip": "00899",
+        "status": "At Scene",
+        "pinned": false,
+        "unread": true
+    },
+    {
+        "trip": "00869",
+        "status": "En-route",
+        "pinned": false,
+        "unread": false
+    }
+   ]
+}

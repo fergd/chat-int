@@ -1,0 +1,104 @@
+--- 
+layout: home 
+---
+<nav class="navbar d-flex justify-content-between">
+    <div class="p-2">
+        <h1><a class="navbar-brand" href="#">SANDBOX</a></h1>
+    </div>
+    <div class="dropdown ml-auto p-2">
+        <button class="btn-no-bg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-ellipsis-v"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+</nav>
+
+<main class="d-flex"  id="app">
+    <div class="container__contacts d-flex flex-column section-container">
+        <article class="sidebar comp__channels">
+        	<header class="header__group d-flex align-items-center" data-unread="true">
+        		<i class="far fa-dot-circle fa-xs header--unread"></i>
+			    <h4>{{ site.data.section_headers.sections[0].title }}</h4>
+			</header>
+            <section class="container__items">
+				{% for item in site.data.items_channel.channel %} 
+            	<div class="item d-flex justify-content-between align-items-center" {% if item.unread %}data-unread{% endif %} >
+            		<div class="item__group-a d-flex align-items-center">
+            			{% if item.unread %} 
+	            		<i class="far fa-dot-circle fa-xs"></i>
+	            		{% else %}  
+	            		<i class="far fa-dot-circle fa-xs" style="color: white"></i>
+	            		{% endif %}
+	            		<span class="item__operation">{{ item.trip }}</span>
+            		</div>
+            		<div class="item__group-b">
+            			<span class="item__status">{{ item.status }}</span>
+						<i class="icn__action far fa-thumbtack"></i>
+						<i class="icn__action far fa-eye"></i>
+					</div>
+            	</div>
+            	{% endfor %} 
+            </section>
+        </article>
+        <article class="sidebar comp__groups">
+        	<header class="header__group">
+			    <h4>{{ site.data.section_headers.sections[1].title }}</h4>
+			</header>            
+			<section class="container__items">
+            	<div class="item">
+            		
+            	</div>
+            </section>
+        </article>
+    </div>
+
+    <div class="container__chat">
+        <header class="header__group d-flex justify-content-between align-items-center">
+            <h4>Jane Smith</h4>
+            <div>
+                <i class="far fa-thumbtack"></i>
+                <i class="far fa-times-circle"></i>
+            </div>
+        </header>
+        <section class="area__chat">
+            <div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container__pinned d-flex flex-column section-container">
+		<section class="d-flex justify-content-center align-items-center">
+			<i class="far fa-thumbtack fa-lg"></i>
+		</section>
+		<section class="d-flex justify-content-center align-items-center">
+			<i class="far fa-thumbtack fa-lg"></i>
+		</section>
+		<section class="d-flex justify-content-center align-items-center">
+			<i class="far fa-thumbtack fa-lg"></i>
+		</section>
+   	</div>
+
+   	<div class="container__ptt section-container">
+        	<header class="header__group is-ptt">
+			    <h4>{{ site.data.section_headers.sections[2].title }}</h4>
+			</header>            
+        <section class="area__ptt">
+        	{% for user in site.data.users.users %} 
+            <div class="ptt__button d-flex justify-content-between" data-state="{{ user.state }}"
+            >
+            <span>{{ user.first_name }}&nbsp;{{ user.last_name }}</span>
+            {% unless user.state == 'is_incoming' %} 
+            <span class="ptt__button__control"><i class="far fa-times-circle"></i></span>
+            {% endunless %} 
+            {% if user.state == 'is_incoming' %} 
+        	<span><i class="far fa-volume-up"></i></span>
+        	{% endif %} 
+        	</div>
+        	
+        	{% endfor %} 
+        </section>
+   	</div>
+</main>
