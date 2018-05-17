@@ -2,6 +2,7 @@
 ---
 // Custom CSS atop Bootstrap
 //==Color==//
+$blue--zoll: 						#0082C8;
 $gray-blue--darkest: 		#4A5462;
 $gray-blue--dark: 			#808792;
 $gray-blue--medium: 		#BEBFBF;
@@ -60,7 +61,7 @@ body{
 	font-size: 16px;
 	line-height: 19px;
 	color: $gray-blue--darkest;
-}  
+}
 h1,h2,h3,h4{
 	font-family: $type__title;
 	color: $gray-blue--darkest;
@@ -70,6 +71,7 @@ h1,h2,h3,h4{
 	font-family: $type__logo;
 	font-size: $t-medium;
 	padding: 0;
+	color: $blue--zoll;
 }
 //==END Typography==//
 
@@ -116,6 +118,7 @@ body{
 	background-color: white;
 	padding: $size--small;
 	border-bottom: 2px solid $green--default;
+	border-radius: 5px 5px 0 0 ;
 }
 .header__group svg{
 	color: $orange--default;
@@ -157,7 +160,7 @@ body{
 		.icn__action{
 			visibility: hidden;
 		}
-		
+
 		svg.fa-thumbtack{
 			margin-right: $size--small;
 		}
@@ -166,11 +169,18 @@ body{
 			font-size: $t-small;
 			color: $orange--default;
 			text-align: right;
-		} 
+		}
 	}
 	&[data-unread]{
 		span.item__operation{
 			font-weight: bold;
+		}
+	}
+	&[data-pinned]{
+		div.item__group-b{
+			svg.fa-thumbtack{
+				visibility: visible;
+			}
 		}
 	}
 }
@@ -239,19 +249,24 @@ body{
 [data-state="is_busy"]{
 	border: 1px solid $red--default;
 	background: #FFE1E1;
-    background: linear-gradient(-45deg, 
-    #fff 25%, #FFF2F2 0, #FFF2F2 50%, 
+    background: linear-gradient(-45deg,
+    #fff 25%, #FFF2F2 0, #FFF2F2 50%,
     #fff 0, #fff 75%, #FFF2F2 0);
     background-size: 16px 16px;
 }
 [data-state="is_waiting"]{
 	border: 1px solid $orange--default;
 	background: #FFE1E1;
-    background: linear-gradient(-45deg, 
-    #fff 25%, $yellow--default 0, $yellow--default 50%, 
+    background: linear-gradient(-45deg,
+    #fff 25%, $yellow--default 0, $yellow--default 50%,
     #fff 0, #fff 75%, $yellow--default 0);
     background-size: 16px 16px;
-}
+		animation: barberpole 15s linear infinite;
+	}
+	@keyframes barberpole {
+	  from { background-position: 0 0; }
+	  to   { background-position: 0 1000px; }
+	}
 [data-state="is_unread"]{
 	background: white;
 	border-color: $aqua--default;
@@ -283,4 +298,12 @@ body{
   to {
     box-shadow: 0 0 0px 3px rgba(141,198,64,.5);
   }
+}
+
+
+.heading-wrap{
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 64px);
 }
